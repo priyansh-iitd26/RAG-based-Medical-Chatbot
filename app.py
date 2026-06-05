@@ -102,7 +102,7 @@ def initialize_rag_chain():
     retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 
     chatModel = ChatOpenAI(
-        model="meta-llama/llama-3-8b-instruct:free",
+        model="meta-llama/llama-3-8b-instruct",
         openai_api_key=OPENROUTER_API_KEY,
         base_url="https://openrouter.ai/api/v1",
         temperature=0
