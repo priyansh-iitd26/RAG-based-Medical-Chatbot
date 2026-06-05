@@ -91,7 +91,7 @@ os.environ["OPENROUTER_API_KEY"] = OPENROUTER_API_KEY
 # This ensures we don't re-download embeddings or re-initialize connections on every chat message.
 @st.cache_resource
 def initialize_rag_chain():
-    embeddings = download_hugging_face_embeddings()
+    embeddings = download_embeddings()
     index_name = "medical-chatbot" 
 
     docsearch = PineconeVectorStore.from_existing_index(
